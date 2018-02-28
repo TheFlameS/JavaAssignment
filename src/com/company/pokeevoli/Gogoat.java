@@ -1,6 +1,6 @@
-package com.company.PokeEvoLis;
+package com.company.pokeevoli;
 
-import com.company.pokemonLis.Skiddo;
+import com.company.pokemonli.Skiddo;
 
 public class Gogoat extends Skiddo {
 
@@ -10,6 +10,6 @@ public class Gogoat extends Skiddo {
 
     @Override
     public void eat() {
-        this.weight += (gainingWeightStep/2);
+        weight
     }
 }

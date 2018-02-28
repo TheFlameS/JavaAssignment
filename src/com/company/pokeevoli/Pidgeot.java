@@ -1,7 +1,6 @@
-package com.company.PokeEvoLis;
+package com.company.pokeevoli;
 
-import com.company.Pokemon;
-import com.company.wildPokemon.Pidgey;
+import com.company.wildpokemo.Pidgey;
 
 public class Pidgeot extends Pidgey {
 

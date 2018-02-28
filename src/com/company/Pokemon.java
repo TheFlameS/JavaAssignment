@@ -10,6 +10,7 @@ public class Pokemon {
     protected int step;
     protected float gainingWeightStep;
     protected String[] types;
+    protected double mood;
 
     //Constructor
     public Pokemon(String name,
@@ -21,6 +22,7 @@ public class Pokemon {
         this.weight = weight;
         this.stepLength = stepLength;
         this.gainingWeightStep = gainingWeightStep;
+        this.mood = Math.random();
         step = 0;
 
         if(types == null)
@@ -52,5 +54,9 @@ public class Pokemon {
 
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

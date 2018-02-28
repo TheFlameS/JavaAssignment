@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class PokemonFarm {
 
     private ArrayList<Pokemon> pokemons;
+
     public PokemonFarm(){
         pokemons = new ArrayList<Pokemon>();
     }

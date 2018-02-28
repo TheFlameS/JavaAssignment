@@ -1,13 +1,7 @@
 package com.company.Item;
 
-public class Pokeball {
-    private double opportunity;
-
+public class Pokeball extends Ball {
     public Pokeball(double opportunity) {
-        this.opportunity = 0.8;
-    }
-
-    public double getOpportunity() {
-        return opportunity;
+        super(0.8);
     }
 }

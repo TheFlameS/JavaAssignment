@@ -1,14 +1,7 @@
 package com.company.Item;
 
-public class Ultraball{
-
-    private double opportunity;
-
-    public Ultraball() {
-        opportunity = 1;
-    }
-
-    public double getOpportunity() {
-        return opportunity;
+public class Ultraball extends Ball{
+    public Ultraball(double opportunity) {
+        super(1);
     }
 }

@@ -1,8 +1,8 @@
 package com.company;
 
-import com.company.pokemonLis.Bruxish;
-import com.company.pokemonLis.Gardevoir;
-import com.company.pokemonLis.Litwick;
+import com.company.pokemonli.Bruxish;
+import com.company.pokemonli.Gardevoir;
+import com.company.pokemonli.Litwick;
 
 import java.util.Scanner;
 
@@ -12,6 +12,8 @@ public class CommandParser {
     private PokemonFarm pokemonFarm;
     private Scanner scanner;
     private boolean isRunning;
+    private Forest forest;
+    private Bag bag;
 
     public CommandParser(PokemonFarm pokemonFarm) {
         this.pokemonFarm = pokemonFarm;
@@ -38,6 +40,12 @@ public class CommandParser {
             }
             else if(command.equals("exercise")){
                 this.exercise();
+            }
+            else if(command.equals("rename")){
+                this.rename();
+            }
+            else if(command.equals("forest")){
+                this.goForest();
             }
 
         }
@@ -86,5 +94,22 @@ public class CommandParser {
         int time = this.scanner.nextInt();
         this.pokemonFarm.walk(name, time);
         System.out.println("done~");
+    }
+
+    private void rename(){
+        System.out.print("Name: ");
+        String name = this.scanner.next();
+
+    }
+
+    private void goForest(){
+        bag = new Bag();
+        forest = new Forest();
+        scanner.nextLine();
+        String backToFarm = scanner.nextLine();
+        while (backToFarm.equals("find")){
+            forest.randomPokemon();
+        }
+
     }
 }

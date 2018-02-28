@@ -1,17 +1,28 @@
 package com.company;
 
-import java.util.Random;
+import java.util.ArrayList;
 
 public class Bag {
-    Random rand;
-    int ballNo;
+    private ArrayList <Pokemon> Pokemons;
+
 
     public Bag() {
-        this.rand = new Random();
+        this.Pokemons = new ArrayList<Pokemon>();
     }
 
-    public int pickBall() {
-        this.ballNo = rand.nextInt(3) + 1;
-        return ballNo;
+    public void pickBall(String choose) {
+        if(choose.equals("pokeball")){
+
+        }
+        else if(choose.equals("greatball")){
+
+        }
+        else if(choose.equals("ultraball")){
+
+        }
+    }
+
+    public void add(Pokemon pokemon){
+        Pokemons.add(pokemon);
     }
 }

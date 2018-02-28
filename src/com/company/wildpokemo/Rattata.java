@@ -1,4 +1,4 @@
-package com.company.wildPokemon;
+package com.company.wildpokemo;
 
 import com.company.Pokemon;
 

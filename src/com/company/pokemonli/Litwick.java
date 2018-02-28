@@ -1,4 +1,4 @@
-package com.company.pokemonLis;
+package com.company.pokemonli;
 
 import com.company.Pokemon;
 

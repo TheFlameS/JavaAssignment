@@ -1,6 +1,6 @@
-package com.company.PokeEvoLis;
+package com.company.pokeevoli;
 
-import com.company.wildPokemon.Rattata;
+import com.company.wildpokemo.Rattata;
 
 public class Raticate extends Rattata{
 

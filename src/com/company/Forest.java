@@ -1,12 +1,12 @@
 package com.company;
 
-import com.company.wildPokemon.Pidgey;
-
 import java.util.Random;
 
 public class Forest {
-    Random random;
-    int pokemonNo;
+
+    private Random random;
+    private int pokemonNo;
+
 
     public Forest() {
         this.random = new Random();
@@ -17,5 +17,5 @@ public class Forest {
         pokemonNo = random.nextInt();
     }
 
-    
+
 }
