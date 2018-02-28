@@ -25,6 +25,7 @@ public class CommandParser {
         isRunning = true;
         String command;
         while (isRunning){
+            System.out.print("Command game :");
             command = scanner.next();
             if(command.equals("quit")){
                 isRunning = false;
@@ -73,6 +74,7 @@ public class CommandParser {
             pokemonFarm.addPokemon(gardevoir);
         }
     }
+
     private void listPokemons(){
         System.out.println("==========================================");
         System.out.println("Pokemon List");
@@ -110,9 +112,11 @@ public class CommandParser {
         scanner.nextLine();
         String backToFarm = scanner.nextLine();
         while (!(backToFarm.equals("back"))){
+
             String checking;
             forest.randomPokemon();
             System.out.print("What's next? : ");
+
             checking = scanner.nextLine();
             if(checking.equals("catch")){
                 System.out.print("Ball? : ");

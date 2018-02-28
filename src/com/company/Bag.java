@@ -38,6 +38,9 @@ public class Bag {
             wild.setName(name);
             add(wild);
         }
+        else {
+            System.out.println("Failed, escaped...");
+        }
     }
 
     private void add(Pokemon pokemon){

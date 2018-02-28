@@ -13,7 +13,7 @@ public class Gogoat extends Skiddo {
         this.weight += (gainingWeightStep/2) ;
     }
 
-    public void skill(){
-        System.out.println("Use ");
+    public void skillDoubleEdge(){
+        System.out.println("Use Double-Edge");
     }
 }
