@@ -42,9 +42,6 @@ public class CommandParser {
             else if(command.equals("exercise")){
                 this.exercise();
             }
-            else if(command.equals("rename")){
-                this.rename();
-            }
             else if(command.equals("forest")){
                 this.goForest();
             }
@@ -96,12 +93,6 @@ public class CommandParser {
         int time = this.scanner.nextInt();
         this.pokemonFarm.walk(name, time);
         System.out.println("done~");
-    }
-
-    private void rename(){
-        System.out.print("Name: ");
-        String name = this.scanner.next();
-
     }
 
     private void goForest(){
