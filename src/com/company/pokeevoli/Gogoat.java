@@ -10,6 +10,10 @@ public class Gogoat extends Skiddo {
 
     @Override
     public void eat() {
-        weight
+        this.weight += (gainingWeightStep/2) ;
+    }
+
+    public void skill(){
+        System.out.println("Use ");
     }
 }

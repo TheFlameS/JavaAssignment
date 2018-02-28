@@ -103,13 +103,26 @@ public class CommandParser {
     }
 
     private void goForest(){
+        System.out.println("IN THE JUNGLE...");
+
         bag = new Bag();
         forest = new Forest();
         scanner.nextLine();
         String backToFarm = scanner.nextLine();
-        while (backToFarm.equals("find")){
+        while (!(backToFarm.equals("back"))){
+            String checking;
             forest.randomPokemon();
+            System.out.print("What's next? : ");
+            checking = scanner.nextLine();
+            if(checking.equals("catch")){
+                System.out.print("Ball? : ");
+                bag.useBall(scanner.nextLine(), forest.getWild());
+
+            }
+            System.out.print("Out? :");
+            backToFarm = scanner.nextLine();
         }
 
+        pokemonFarm.transfer(bag.getPokemons());
     }
 }

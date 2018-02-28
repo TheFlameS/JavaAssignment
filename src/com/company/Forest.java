@@ -1,11 +1,15 @@
 package com.company;
 
+import com.company.wildpokemo.Pidgey;
+import com.company.wildpokemo.Rattata;
+
 import java.util.Random;
 
 public class Forest {
 
     private Random random;
     private int pokemonNo;
+    private Pokemon wild;
 
 
     public Forest() {
@@ -13,9 +17,19 @@ public class Forest {
         pokemonNo = 0;
     }
 
-    public int randomPokemon(){
-        pokemonNo = random.nextInt();
+    public void randomPokemon(){
+        pokemonNo = random.nextInt(1)+1;
+        if(pokemonNo == 1){
+            wild = new Pidgey("Wild",random.nextInt(19)+1,2f);
+            System.out.println("Pidgey!!");
+        }
+        else if(pokemonNo == 2){
+            wild = new Rattata("Wild",random.nextInt(9)+1,0.7f);
+            System.out.println("Rattata!!");
+        }
     }
 
-
+    public Pokemon getWild() {
+        return wild;
+    }
 }

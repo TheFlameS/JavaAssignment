@@ -50,5 +50,11 @@ public class PokemonFarm {
         }
     }
 
+    public void transfer(ArrayList<Pokemon> fromBag){
+        for(Pokemon pokemon: fromBag){
+            addPokemon(pokemon);
+        }
+    }
+
 
 }

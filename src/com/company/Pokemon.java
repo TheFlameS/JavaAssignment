@@ -56,7 +56,12 @@ public class Pokemon {
         return name;
     }
 
+    public double getMood() {
+        return mood;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
+
 }

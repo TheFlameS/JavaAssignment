@@ -4,8 +4,8 @@ import com.company.Pokemon;
 
 public class Pidgey extends Pokemon {
 
-    public Pidgey(String name, float weight, float stepLength, float gainingWeightStep, String[] types) {
-        super(name, weight, stepLength, gainingWeightStep, types);
+    public Pidgey(String name, float weight, float stepLength) {
+        super(name, weight, stepLength, 1f, new String[] {"Flying"});
     }
 
     public void skillQuickAtk(){

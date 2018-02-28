@@ -5,7 +5,7 @@ import com.company.Pokemon;
 public class Bruxish extends Pokemon {
 
     public Bruxish(String name, float weight, float stepLength){
-        super(name, weight, stepLength, 1f, new String[] {"Water"});
+        super(name, weight, stepLength, 2.2f, new String[] {"Water"});
     }
 
     //Skill
