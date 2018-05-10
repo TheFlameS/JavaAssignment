@@ -1,5 +1,7 @@
 package com.company;
 
+import com.company.gui.MainGui;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -46,6 +48,7 @@ public class Main {
 //        }
         //-----------------------Old code-------------------------
 
+        new MainGui();
         PokemonFarm pokemonFarm = new PokemonFarm();
         CommandParser commandParser = new CommandParser(pokemonFarm);
 
