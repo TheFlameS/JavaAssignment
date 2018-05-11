@@ -16,8 +16,8 @@ public class MainGui extends JFrame{
         JPanel jPanelTopMenu = new JPanel();
         jPanelTopMenu.setLayout(new FlowLayout());
 
-        JRadioButton farm = new JRadioButton("Farm");
-        JRadioButton forest = new JRadioButton("Forest");
+        JButton farm = new JButton("Farm");
+        JButton forest = new JButton("Forest");
 
         jPanelTopMenu.add(farm);
         jPanelTopMenu.add(forest);
@@ -78,7 +78,7 @@ public class MainGui extends JFrame{
         center.setLayout(new GridLayout(0,2));
 
         JLabel pokemonIcon = new JLabel("");
-        JLabel pokemonStatus = new JLabel("There is nothing...");
+        JLabel pokemonStatus = new JLabel("There is nothing... pls add some pokemon");
         Icon img = new ImageIcon(getClass().getResource("./image_files/Nothing.png"));
         pokemonIcon.setIcon(img);
 
