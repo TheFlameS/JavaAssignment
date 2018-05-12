@@ -66,7 +66,7 @@ public class MainGui extends JFrame {
         list.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                new ListGui(pokemonFarm);
             }
         });
 
@@ -88,6 +88,7 @@ public class MainGui extends JFrame {
 
         //center
         JLabel pokemonIcon = new JLabel("");
+        pokemonIcon.setHorizontalAlignment(JLabel.CENTER);
         Icon img = new ImageIcon(getClass().getResource("./image_files/Start.png"));
         pokemonIcon.setIcon(img);
 

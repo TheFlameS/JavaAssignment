@@ -1,6 +1,8 @@
 package com.company;
 
 import com.company.pokemonli.Bruxish;
+import com.company.pokemonli.Gardevoir;
+import com.company.pokemonli.Litwick;
 
 import java.util.ArrayList;
 
@@ -11,6 +13,8 @@ public class PokemonFarm {
     public PokemonFarm(){
         pokemons = new ArrayList<Pokemon>();
         pokemons.add(new Bruxish("first", 888, 10));
+        pokemons.add(new Litwick("second", 999, 11));
+        pokemons.add(new Gardevoir("third", 101010, 12));
     }
 
     public void addPokemon(Pokemon pokemon){
@@ -59,5 +63,21 @@ public class PokemonFarm {
         }
     }
 
+    public int getPokemonAmount(){
+        return pokemons.size();
+    }
 
+    public String getPokemonName(int i){
+        return pokemons.get(i).getName();
+    }
+
+    public Pokemon getPokemon(String name){
+        Pokemon now = null;
+        for(Pokemon pokemon: pokemons){
+            if (pokemon.getName().equals(name)){
+                return pokemon;
+            }
+        }
+        return now;
+    }
 }

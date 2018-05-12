@@ -64,4 +64,17 @@ public class Pokemon {
         this.name = name;
     }
 
+    public String printGui(){
+        String typePoke = "";
+        for(String type: types){
+            typePoke += type+ ", ";
+        }
+        typePoke += "/n";
+
+        return "Name : " + name + "/n"
+                + "Type : " + typePoke + "/n"
+                + "Weight : " + weight + "/n"
+                + "Step length : " + stepLength + "/n"
+                + "Today : " + step;
+    }
 }

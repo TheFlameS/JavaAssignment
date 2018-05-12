@@ -34,13 +34,6 @@ public class AddGui extends JFrame {
         JLabel lengthLabel = new JLabel("Length : ",10);
 
         //input type, name, weight, length
-        //JPanel choose type
-        JPanel choose = new JPanel();
-        choose.setLayout(new FlowLayout());
-
-        choose.add(choosePokemon);
-        choose.add(typeLabel);
-
         JTextField nameFeild = new JTextField(10);
         JTextField weightFeild = new JTextField(10);
         JTextField lengthFeild = new JTextField(10);
@@ -97,7 +90,7 @@ public class AddGui extends JFrame {
         });
 
         c.add(typeLabel);
-        c.add(choose);
+        c.add(choosePokemon);
         c.add(nameLabel);
         c.add(nameFeild);
         c.add(weightLabel);
