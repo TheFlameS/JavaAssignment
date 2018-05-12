@@ -57,11 +57,9 @@ public class MainGui extends JFrame {
 
         JButton list = new JButton("List");
         JButton add = new JButton("Add");
-        JButton feed = new JButton("Feed");
 
         jPanelBottomBtn.add(list);
         jPanelBottomBtn.add(add);
-        jPanelBottomBtn.add(feed);
 
         list.addActionListener(new ActionListener() {
             @Override
@@ -77,13 +75,6 @@ public class MainGui extends JFrame {
             }
         });
 
-        feed.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-            }
-        });
-
         c.add(jPanelBottomBtn, BorderLayout.PAGE_END);
 
         //center
@@ -91,7 +82,6 @@ public class MainGui extends JFrame {
         pokemonIcon.setHorizontalAlignment(JLabel.CENTER);
         Icon img = new ImageIcon(getClass().getResource("./image_files/Start.png"));
         pokemonIcon.setIcon(img);
-
 
         c.add(pokemonIcon, BorderLayout.CENTER);
 

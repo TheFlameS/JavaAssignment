@@ -64,17 +64,23 @@ public class Pokemon {
         this.name = name;
     }
 
-    public String printGui(){
-        String typePoke = "";
+    public String getTypes() {
+        String ty = "";
         for(String type: types){
-            typePoke += type+ ", ";
+            ty += type+ ", ";
         }
-        typePoke += "/n";
+        return ty;
+    }
 
-        return "Name : " + name + "/n"
-                + "Type : " + typePoke + "/n"
-                + "Weight : " + weight + "/n"
-                + "Step length : " + stepLength + "/n"
-                + "Today : " + step;
+    public float getWeight() {
+        return weight;
+    }
+
+    public float getStepLength() {
+        return stepLength;
+    }
+
+    public int getStep() {
+        return step;
     }
 }

@@ -22,17 +22,12 @@ public class ListGui extends JFrame {
         pokemonNameList = new String[pokemonFarm.getPokemonAmount()];
 
         for (int i = 0; i < pokemonFarm.getPokemonAmount(); i++) {
-            if(i == 0){
-                pokemonNameList[i] = "Nothing";
-            }
-            else {
-                pokemonNameList[i] = pokemonFarm.getPokemonName(i);
-            }
+            pokemonNameList[i] = pokemonFarm.getPokemonName(i);
         }
 
         //Top section
-        JPanel info = new JPanel();
-        info.setLayout(new FlowLayout());
+        JPanel infoComm = new JPanel();
+        infoComm.setLayout(new FlowLayout());
 
         JComboBox pokemonList = new JComboBox(pokemonNameList);
 
@@ -45,16 +40,50 @@ public class ListGui extends JFrame {
         JLabel pic = new JLabel();
         pic.setIcon(img);
 
-        JLabel statusInfo = new JLabel("There's nothing");
+        //Panel info
+        JPanel info = new JPanel();
+        info.setLayout(new GridLayout(0,1));
+
+        JLabel nameInfo = new JLabel("There's nothing");
+        JLabel typeInfo = new JLabel("");
+        JLabel weightInfo = new JLabel("");
+        JLabel stepLengthInfo = new JLabel("");
+        JLabel stepInfo = new JLabel("");
+
+        info.add(nameInfo);
+        info.add(typeInfo);
+        info.add(weightInfo);
+        info.add(stepLengthInfo);
+        info.add(stepInfo);
 
         status.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String name = (String) pokemonList.getSelectedItem();
                 Pokemon present = pokemonFarm.getPokemon(name);
+                pic.setIcon(new ImageIcon(getClass().getResource("./image_files/" + present.getClass().getSimpleName() + ".png")));
+                nameInfo.setText("Name : " + present.getName());
+                typeInfo.setText("Type : " + present.getTypes());
+                weightInfo.setText("Weight : " + present.getWeight());
+                stepLengthInfo.setText("Step length : " + present.getStepLength());
+                stepInfo.setText("Step today : " + present.getStep());
+            }
+        });
 
-                statusInfo.setText(present.printGui());
+        feed.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String name = (String) pokemonList.getSelectedItem();
+                Pokemon present = pokemonFarm.getPokemon(name);
+                present.eat();
+                weightInfo.setText("Weight : " + present.getWeight());
+            }
+        });
 
+        back.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setVisible(false);
             }
         });
 
@@ -62,19 +91,15 @@ public class ListGui extends JFrame {
         picAndStats.setLayout(new GridLayout(0,2));
 
         picAndStats.add(pic);
-        picAndStats.add(statusInfo);
+        picAndStats.add(info);
 
-        info.add(pokemonList);
-        info.add(status);
-        info.add(feed);
-        info.add(back);
+        infoComm.add(pokemonList);
+        infoComm.add(status);
+        infoComm.add(feed);
+        infoComm.add(back);
 
-        c.add(info);
+        c.add(infoComm);
         c.add(picAndStats);
-
-
-
-
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         pack();

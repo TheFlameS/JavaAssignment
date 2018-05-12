@@ -12,8 +12,6 @@ public class NameInputGui extends JFrame {
 
     public NameInputGui(String name) {
 
-        this.pokemonName = name;
-
         //Set container
         Container c = getContentPane();
         c.setLayout(new FlowLayout());
@@ -40,4 +38,7 @@ public class NameInputGui extends JFrame {
         setVisible(true);
     }
 
+    public String getPokemonName() {
+        return pokemonName;
+    }
 }

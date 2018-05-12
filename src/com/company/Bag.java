@@ -20,6 +20,7 @@ public class Bag {
 
     public void useBall(String choose, Pokemon wild) {
 
+        String name = "";
         if(choose.equals("Pokeball")){
             Pokeball pokeball = new Pokeball();
             success = pokeball.catchPokemon(wild.getMood());
@@ -35,7 +36,6 @@ public class Bag {
 
         if(success){
             System.out.print("Success ! , Need the name : ");
-            String name = "";
             new NameInputGui(name);
             wild.setName(name);
             add(wild);
@@ -43,6 +43,7 @@ public class Bag {
         else {
             System.out.println("Failed, escaped...");
         }
+
     }
 
     private void add(Pokemon pokemon){

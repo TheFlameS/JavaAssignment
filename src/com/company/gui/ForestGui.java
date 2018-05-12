@@ -71,8 +71,6 @@ public class ForestGui extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 bag.useBall((String) chooseBall.getSelectedItem(),forest.getWild());
-
-
             }
         });
 
