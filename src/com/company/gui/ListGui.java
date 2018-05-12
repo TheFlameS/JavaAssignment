@@ -33,6 +33,7 @@ public class ListGui extends JFrame {
 
         JButton status = new JButton("Status");
         JButton feed = new JButton("Feed");
+        JButton exercise = new JButton("Exercise");
         JButton back = new JButton("Back");
 
         //Picture and status
@@ -80,6 +81,17 @@ public class ListGui extends JFrame {
             }
         });
 
+        exercise.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String name = (String) pokemonList.getSelectedItem();
+                Pokemon present = pokemonFarm.getPokemon(name);
+                double walking = (Math.random()+2)*3;
+                present.walk((int) walking);
+                stepInfo.setText("Step today : " + present.getStep());
+            }
+        });
+
         back.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -96,6 +108,7 @@ public class ListGui extends JFrame {
         infoComm.add(pokemonList);
         infoComm.add(status);
         infoComm.add(feed);
+        infoComm.add(exercise);
         infoComm.add(back);
 
         c.add(infoComm);
