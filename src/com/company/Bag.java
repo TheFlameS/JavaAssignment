@@ -3,6 +3,7 @@ package com.company;
 import com.company.Item.Greatball;
 import com.company.Item.Pokeball;
 import com.company.Item.Ultraball;
+import com.company.gui.NameInputGui;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -19,22 +20,23 @@ public class Bag {
 
     public void useBall(String choose, Pokemon wild) {
 
-        if(choose.equals("pokeball")){
+        if(choose.equals("Pokeball")){
             Pokeball pokeball = new Pokeball();
             success = pokeball.catchPokemon(wild.getMood());
         }
-        else if(choose.equals("greatball")){
+        else if(choose.equals("Greatball")){
             Greatball greatball = new Greatball();
             success = greatball.catchPokemon(wild.getMood());
         }
-        else if(choose.equals("ultraball")){
+        else if(choose.equals("Ultraball")){
             Ultraball ultraball = new Ultraball();
             success = ultraball.catchPokemon(wild.getMood());
         }
 
         if(success){
             System.out.print("Success ! , Need the name : ");
-            String name = sc.nextLine();
+            String name = "";
+            new NameInputGui(name);
             wild.setName(name);
             add(wild);
         }

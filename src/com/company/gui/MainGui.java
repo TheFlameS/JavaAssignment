@@ -38,14 +38,14 @@ public class MainGui extends JFrame {
         farm.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                JOptionPane.showMessageDialog(null, "Just press 'List' if you want to see your pokemon that you have");
             }
         });
 
         forest.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                new ForestGui(pokemonFarm);
             }
         });
 
@@ -87,18 +87,12 @@ public class MainGui extends JFrame {
         c.add(jPanelBottomBtn, BorderLayout.PAGE_END);
 
         //center
-        JPanel center = new JPanel();
-        center.setLayout(new GridLayout(0,2));
-
         JLabel pokemonIcon = new JLabel("");
-        JLabel pokemonStatus = new JLabel("There is nothing... pls add some pokemon");
-        Icon img = new ImageIcon(getClass().getResource("./image_files/Nothing.png"));
+        Icon img = new ImageIcon(getClass().getResource("./image_files/Start.png"));
         pokemonIcon.setIcon(img);
 
-        center.add(pokemonIcon);
-        center.add(pokemonStatus);
 
-        c.add(center, BorderLayout.CENTER);
+        c.add(pokemonIcon, BorderLayout.CENTER);
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         pack();

@@ -37,4 +37,8 @@ public class Forest {
     public Pokemon getWild() {
         return wild;
     }
+
+    public int getPokemonNo() {
+        return pokemonNo;
+    }
 }

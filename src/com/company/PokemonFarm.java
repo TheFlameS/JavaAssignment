@@ -1,5 +1,7 @@
 package com.company;
 
+import com.company.pokemonli.Bruxish;
+
 import java.util.ArrayList;
 
 public class PokemonFarm {
@@ -8,6 +10,7 @@ public class PokemonFarm {
 
     public PokemonFarm(){
         pokemons = new ArrayList<Pokemon>();
+        pokemons.add(new Bruxish("first", 888, 10));
     }
 
     public void addPokemon(Pokemon pokemon){

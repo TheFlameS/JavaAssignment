@@ -96,8 +96,6 @@ public class AddGui extends JFrame {
             }
         });
 
-
-
         c.add(typeLabel);
         c.add(choose);
         c.add(nameLabel);
