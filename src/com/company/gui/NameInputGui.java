@@ -1,5 +1,7 @@
 package com.company.gui;
 
+import com.company.Pokemon;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -10,7 +12,7 @@ public class NameInputGui extends JFrame {
     private String pokemonName;
     private JTextField input;
 
-    public NameInputGui(String name) {
+    public NameInputGui(Pokemon wild) {
 
         //Set container
         Container c = getContentPane();
@@ -24,7 +26,7 @@ public class NameInputGui extends JFrame {
         ok.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                pokemonName = input.getText();
+                wild.setName(input.getText());
                 setVisible(false);
             }
         });
@@ -36,6 +38,10 @@ public class NameInputGui extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         pack();
         setVisible(true);
+    }
+
+    private void setPokemonName(){
+
     }
 
     public String getPokemonName() {
