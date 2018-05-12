@@ -19,6 +19,7 @@ public class CommandParser {
         this.pokemonFarm = pokemonFarm;
         scanner = new Scanner(System.in);
         isRunning = false;
+
     }
 
     public void run(){
@@ -26,6 +27,7 @@ public class CommandParser {
         String command;
         while (isRunning){
             System.out.print("Command game :");
+            //command = MainGui.getCommand();
             command = scanner.next();
             if(command.equals("quit")){
                 isRunning = false;

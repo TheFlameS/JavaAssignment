@@ -1,14 +1,27 @@
 package com.company.gui;
 
+import com.company.Bag;
+import com.company.Forest;
+import com.company.Pokemon;
+import com.company.PokemonFarm;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class MainGui extends JFrame{
-    public MainGui (){
+public class MainGui extends JFrame {
+
+    private PokemonFarm pokemonFarm;
+    private Forest forest;
+    private Bag bag;
+
+    public MainGui (PokemonFarm pokemonFarm){
         super("Pokemon");
 
+        this.pokemonFarm = pokemonFarm;
+
+        //GUI
         Container c = getContentPane();
         c.setLayout(new BorderLayout());
 
@@ -25,14 +38,14 @@ public class MainGui extends JFrame{
         farm.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("Blah");
+
             }
         });
 
         forest.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("Blah");
+
             }
         });
 
@@ -53,21 +66,21 @@ public class MainGui extends JFrame{
         list.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("Blah");
+
             }
         });
 
         add.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("Blah");
+                new AddGui(pokemonFarm);
             }
         });
 
         feed.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("Blah");
+
             }
         });
 
@@ -91,4 +104,6 @@ public class MainGui extends JFrame{
         pack();
         setVisible(true);
     }
+
+
 }

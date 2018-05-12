@@ -48,10 +48,10 @@ public class Main {
 //        }
         //-----------------------Old code-------------------------
 
-        new MainGui();
+
         PokemonFarm pokemonFarm = new PokemonFarm();
         CommandParser commandParser = new CommandParser(pokemonFarm);
-
+        new MainGui(pokemonFarm);
         commandParser.run();
 
 
